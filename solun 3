@@ -1,0 +1,32 @@
+-- To create database--
+create database university1;
+-- To create table--
+create table university1.students(
+id int primary key,
+name varchar(50),
+age int,
+major varchar(50)
+);
+-- Insert values--
+insert into university1.students values(11,'Nivetha','18','Biology');
+insert into university1.students values(12,'Gopika','17','Computer Science');
+insert into university1.students values(13,'Abirami','18','Biology');
+insert into university1.students values(14,'Naveen','19','Computer Science');
+insert into university1.students values(15,'Dhanush','19','Computer Science');
+select*from university1.students;
+
+select*from university1.students
+where major='computer Science';
+
+select*from university1.students
+order by age desc
+limit 1;
+
+-- Update the table--
+update university1.students set major="Science" where id=11;
+
+-- To Delete the specific details in the table--
+delete from university1.students where id=13;
+
+drop database university1;
+
